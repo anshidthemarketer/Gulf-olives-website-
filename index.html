@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gulf Olives — Food Manufacturing Excellence in Saudi Arabia</title>
+<meta name="description" content="Gulf Olives is a Saudi Arabia-based food manufacturer offering B2B supply, private label manufacturing and OEM production for distributors, retailers and HoReCa businesses across the GCC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --green:#002F19;
+    --green-mid:#0F4A2C;
+    --green-tint:#E7EEE9;
+    --gold:#C39A5D;
+    --gold-deep:#9C7940;
+    --cream:#FAF6EF;
+    --sand:#F1E9D8;
+    --ink:#16211A;
+    --ink-soft:#4A564E;
+    --white:#FFFFFF;
+    --line:#DCD3BF;
+    --radius:6px;
+    --maxw:1280px;
+    --shadow: 0 1px 2px rgba(0,20,10,.06);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:'Manrope',sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  html[lang="ar"] body{ font-family:'IBM Plex Sans Arabic','Manrope',sans-serif; }
+  html[lang="ar"] h1, html[lang="ar"] h2, html[lang="ar"] h3, html[lang="ar"] .kufi{
+    font-family:'Noto Kufi Arabic','Manrope',sans-serif;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  button{font-family:inherit; cursor:pointer;}
+  .container{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  h1,h2,h3{margin:0; font-weight:800; color:var(--green); letter-spacing:-0.01em;}
+  h1{font-size:clamp(2.1rem,4.4vw,3.6rem); line-height:1.08;}
+  h2{font-size:clamp(1.7rem,3vw,2.4rem); line-height:1.15;}
+  h3{font-size:1.15rem; line-height:1.3;}
+  p{margin:0;}
+  .lede{font-size:1.1rem; color:var(--ink-soft); max-width:56ch;}
+  .label{
+    display:inline-flex; align-items:center; gap:8px; font-size:.8rem; font-weight:700;
+    color:var(--gold-deep); margin-bottom:14px;
+  }
+  .label::before{content:""; width:9px; height:9px; background:var(--gold); display:inline-block;}
+  html[dir="rtl"] .label{flex-direction:row-reverse;}
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    padding:14px 26px; border-radius:var(--radius); font-weight:700; font-size:.95rem;
+    border:1.5px solid transparent; transition:background .15s ease, color .15s ease, border-color .15s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--green); color:var(--white);}
+  .btn-primary:hover{background:var(--green-mid);}
+  .btn-outline{background:transparent; color:var(--green); border-color:var(--green);}
+  .btn-outline:hover{background:var(--green); color:var(--white);}
+  .btn-gold{background:var(--gold); color:var(--green);}
+  .btn-gold:hover{background:var(--gold-deep); color:var(--white);}
+  .btn-sm{padding:10px 18px; font-size:.85rem;}
+  section{padding:88px 0;}
+  .section-alt{background:var(--sand);}
+  .row-head{display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:44px; flex-wrap:wrap;}
+
+  /* Header */
+  header.site{
+    position:sticky; top:0; z-index:500; background:rgba(250,246,239,.92); backdrop-filter:blur(10px);
+    border-bottom:1px solid transparent; transition:box-shadow .2s ease, border-color .2s ease;
+  }
+  header.site.scrolled{box-shadow:0 2px 14px rgba(0,20,10,.07); border-color:var(--line);}
+  .site-bar{display:flex; align-items:center; justify-content:space-between; padding:16px 0; gap:20px;}
+  .logo{display:flex; align-items:center; gap:10px; flex-shrink:0;}
+  .logo-mark{width:38px; height:38px; border:1.5px solid var(--green); border-radius:3px; display:flex; align-items:center; justify-content:center; position:relative;}
+  .logo-mark::before{content:""; width:14px; height:14px; background:var(--gold); border-radius:50%;}
+  .logo-text{line-height:1.1;}
+  .logo-text b{display:block; font-size:1.02rem; font-weight:800; color:var(--green);}
+  .logo-text span{display:block; font-size:.68rem; color:var(--gold-deep); font-weight:700; letter-spacing:.03em;}
+  nav.primary{display:flex; gap:26px; flex:1; justify-content:center;}
+  nav.primary a{font-size:.92rem; font-weight:600; color:var(--ink); padding:6px 2px; border-bottom:2px solid transparent;}
+  nav.primary a:hover, nav.primary a.active{color:var(--green); border-color:var(--gold);}
+  .head-actions{display:flex; align-items:center; gap:14px; flex-shrink:0;}
+  .lang-switch{display:flex; border:1px solid var(--line); border-radius:20px; overflow:hidden; font-size:.78rem; font-weight:700;}
+  .lang-switch button{padding:6px 12px; background:transparent; border:none; color:var(--ink-soft);}
+  .lang-switch button.active{background:var(--green); color:#fff;}
+  .icon-btn{width:38px; height:38px; border-radius:50%; border:1px solid var(--line); display:flex; align-items:center; justify-content:center; color:var(--green);}
+  .hamburger{display:none; width:38px; height:38px; align-items:center; justify-content:center; border:1px solid var(--line); border-radius:6px; background:none;}
+  .hamburger span, .hamburger span::before, .hamburger span::after{content:""; display:block; width:18px; height:2px; background:var(--green); position:relative;}
+  .hamburger span::before{position:absolute; top:-6px;} .hamburger span::after{position:absolute; top:6px;}
+
+  /* Mobile drawer */
+  .drawer-backdrop{position:fixed; inset:0; background:rgba(0,20,10,.4); z-index:600; display:none;}
+  .drawer{position:fixed; top:0; inset-inline-end:0; height:100%; width:80%; max-width:340px; background:var(--white); z-index:700;
+    transform:translateX(100%); transition:transform .25s ease; padding:26px; overflow-y:auto;}
+  html[dir="rtl"] .drawer{transform:translateX(-100%);}
+  .drawer.open{transform:translateX(0);}
+  .drawer-backdrop.open{display:block;}
+  .drawer a{display:block; padding:14px 0; font-weight:700; color:var(--green); border-bottom:1px solid var(--line);}
+  .drawer-close{margin-bottom:20px; background:none; border:none; font-size:1.4rem; color:var(--green);}
+
+  /* Hero */
+  .hero{padding:64px 0 80px;}
+  .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center;}
+  .hero-visual{position:relative;}
+  .hero-visual .frame{
+    position:relative; background:var(--green); border-radius:var(--radius); overflow:hidden;
+    aspect-ratio:4/5; display:flex; align-items:flex-end; padding:22px;
+  }
+  .hero-visual .frame img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.85;}
+  .hero-visual .frame .tag{position:relative; z-index:2; background:var(--gold); color:var(--green); padding:10px 16px; border-radius:4px; font-weight:800; font-size:.85rem;}
+  .hero-visual .gold-frame{position:absolute; top:22px; inset-inline-start:-22px; width:100%; height:100%; border:2px solid var(--gold); border-radius:var(--radius); z-index:-1;}
+  .hero-ctas{display:flex; flex-wrap:wrap; gap:14px; margin-top:32px;}
+  .hero-meta{display:flex; gap:28px; margin-top:40px; flex-wrap:wrap;}
+  .hero-meta div{border-inline-start:2px solid var(--gold); padding-inline-start:12px;}
+  .hero-meta b{display:block; color:var(--green); font-size:1rem;}
+  .hero-meta span{font-size:.82rem; color:var(--ink-soft);}
+
+  /* Capability / trust cards */
+  .grid-4{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center;}
+  .card{
+    background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:26px;
+    border-top:3px solid transparent; transition:border-color .15s ease;
+  }
+  .card:hover{border-top-color:var(--gold);}
+  .card .icon{width:42px; height:42px; border-radius:50%; background:var(--green-tint); color:var(--green); display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-weight:800;}
+  .card h3{margin-bottom:8px;}
+  .card p{color:var(--ink-soft); font-size:.92rem;}
+
+  /* Timeline */
+  .timeline{display:flex; gap:0; overflow-x:auto; padding-bottom:12px; margin-top:10px;}
+  .timeline .step{flex:1; min-width:160px; padding:20px 18px 20px 0; position:relative;}
+  .timeline .step .num{font-size:.78rem; font-weight:800; color:var(--gold-deep); display:block; margin-bottom:8px;}
+  .timeline .step::after{content:""; position:absolute; top:14px; inset-inline-end:0; width:100%; height:1px; background:var(--line);}
+  .timeline .step:last-child::after{display:none;}
+  .timeline .step h3{font-size:.98rem;}
+
+  /* About / split */
+  .about-visual{background:var(--green); border-radius:var(--radius); aspect-ratio:1/1; position:relative; overflow:hidden;}
+  .about-visual img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.8;}
+
+  /* Category cards */
+  .cat-card{position:relative; border-radius:var(--radius); overflow:hidden; aspect-ratio:4/3; background:var(--green-tint); display:flex; align-items:flex-end; padding:18px;}
+  .cat-card img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .cat-card .overlay{position:absolute; inset:0; background:linear-gradient(to top, rgba(0,47,25,.82), rgba(0,47,25,0) 60%);}
+  .cat-card .label-text{position:relative; z-index:2; color:#fff; font-weight:800; font-size:1.05rem;}
+  .cat-card .label-sub{position:relative; z-index:2; color:var(--sand); font-size:.78rem; margin-top:2px;}
+
+  /* Industries */
+  .ind-card{background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:22px; text-align:center;}
+  .ind-card .icon{width:44px; height:44px; border-radius:50%; background:var(--sand); color:var(--gold-deep); display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-weight:800;}
+
+  /* CTA band */
+  .cta-band{background:var(--green); border-radius:var(--radius); padding:56px; text-align:center; color:#fff;}
+  .cta-band h2{color:#fff;}
+  .cta-band p{color:#DCE6DF; max-width:60ch; margin:14px auto 30px;}
+  .cta-band .btns{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+  .cta-band .btn-outline{border-color:#fff; color:#fff;}
+  .cta-band .btn-outline:hover{background:#fff; color:var(--green);}
+
+  /* Product catalog */
+  .catalog{display:grid; grid-template-columns:260px 1fr; gap:32px; align-items:flex-start;}
+  .filters{background:var(--white); border:1px solid var(--line); border-radius:var(--radius); padding:22px; position:sticky; top:96px;}
+  .filters h3{font-size:.95rem; margin-bottom:14px;}
+  .filter-group{margin-bottom:22px;}
+  .filter-group h4{font-size:.8rem; text-transform:none; color:var(--ink-soft); font-weight:700; margin:0 0 10px;}
+  .filter-group label{display:flex; align-items:center; gap:8px; font-size:.88rem; padding:5px 0; cursor:pointer;}
+  .search-box{display:flex; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; margin-bottom:24px;}
+  .search-box input{flex:1; border:none; padding:12px 14px; font-family:inherit; font-size:.92rem; background:transparent; outline:none;}
+  .search-box button{border:none; background:var(--green); color:#fff; padding:0 18px; font-weight:700;}
+  .catalog-top{display:flex; justify-content:space-between; align-items:center; margin-bottom:18px; flex-wrap:wrap; gap:12px;}
+  select{padding:10px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:inherit; background:#fff;}
+  .prod-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+  .prod-card{background:#fff; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:box-shadow .15s ease;}
+  .prod-card:hover{box-shadow:0 8px 22px rgba(0,20,10,.09);}
+  .prod-card .thumb{aspect-ratio:4/3; background:var(--green-tint); position:relative; overflow:hidden;}
+  .prod-card .thumb img{width:100%; height:100%; object-fit:cover;}
+  .prod-card .badge{position:absolute; top:10px; inset-inline-start:10px; background:var(--gold); color:var(--green); font-size:.7rem; font-weight:800; padding:4px 9px; border-radius:3px;}
+  .prod-card .body{padding:16px;}
+  .prod-card .cat{font-size:.72rem; color:var(--gold-deep); font-weight:700; margin-bottom:4px;}
+  .prod-card h3{font-size:1rem;}
+  .prod-card p{font-size:.85rem; color:var(--ink-soft); margin-top:6px;}
+  .prod-card .view{margin-top:12px; font-size:.85rem; font-weight:700; color:var(--green);}
+  .empty-state{padding:60px 20px; text-align:center; color:var(--ink-soft); border:1px dashed var(--line); border-radius:var(--radius);}
+
+  /* Product detail */
+  .pd-grid{display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:flex-start;}
+  .pd-gallery .main{aspect-ratio:1/1; background:var(--green-tint); border-radius:var(--radius); overflow:hidden; margin-bottom:12px;}
+  .pd-gallery .main img{width:100%; height:100%; object-fit:cover;}
+  .pd-thumbs{display:flex; gap:10px;}
+  .pd-thumbs div{width:64px; height:64px; border-radius:4px; background:var(--sand); border:1px solid var(--line);}
+  .pd-specs{list-style:none; padding:0; margin:20px 0; border-top:1px solid var(--line);}
+  .pd-specs li{display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--line); font-size:.9rem;}
+  .pd-specs li b{color:var(--green); font-weight:700;}
+  .pd-tabs{display:flex; gap:22px; border-bottom:1px solid var(--line); margin:40px 0 20px;}
+  .pd-tabs button{background:none; border:none; padding:10px 0; font-weight:700; color:var(--ink-soft); border-bottom:2px solid transparent;}
+  .pd-tabs button.active{color:var(--green); border-color:var(--gold);}
+  .breadcrumb{font-size:.82rem; color:var(--ink-soft); margin-bottom:24px;}
+  .breadcrumb a{color:var(--green); font-weight:600;}
+
+  /* Forms */
+  form.enquiry{background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:32px; max-width:720px;}
+  .form-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  .form-field{margin-bottom:18px; display:flex; flex-direction:column; gap:6px;}
+  .form-field.full{grid-column:1/-1;}
+  .form-field label{font-size:.85rem; font-weight:700; color:var(--green);}
+  .form-field input, .form-field select, .form-field textarea{
+    padding:12px 14px; border:1px solid var(--line); border-radius:var(--radius); font-family:inherit; font-size:.92rem; background:var(--cream);
+  }
+  .form-field textarea{resize:vertical; min-height:100px;}
+  .process-list{counter-reset:step; list-style:none; padding:0; margin:0; display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+  .process-list li{counter-increment:step; background:#fff; border:1px solid var(--line); border-radius:var(--radius); padding:22px; position:relative;}
+  .process-list li::before{content:counter(step); font-weight:800; color:var(--gold-deep); font-size:1.3rem; display:block; margin-bottom:10px;}
+
+  /* Footer */
+  footer{background:var(--green); color:#DCE6DF; padding:70px 0 24px;}
+  .foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr 1fr; gap:32px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,.12);}
+  footer h4{color:#fff; font-size:.9rem; margin-bottom:16px;}
+  footer a{display:block; font-size:.86rem; padding:6px 0; color:#B9C9BF;}
+  footer a:hover{color:var(--gold);}
+  footer .foot-desc{font-size:.86rem; color:#B9C9BF; margin-top:14px; max-width:32ch;}
+  .foot-bottom{display:flex; justify-content:space-between; align-items:center; padding-top:22px; font-size:.8rem; color:#93A69B; flex-wrap:wrap; gap:12px;}
+  .foot-bottom a{display:inline; padding:0; color:#93A69B;}
+
+  /* WhatsApp float */
+  .wa-float{position:fixed; bottom:24px; inset-inline-end:24px; z-index:400; background:#1EAD54; color:#fff; width:56px; height:56px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(0,0,0,.22); font-size:1.5rem;}
+
+  .page{display:none;} .page.active{display:block;}
+  [data-reveal]{opacity:0; transform:translateY(16px); transition:opacity .5s ease, transform .5s ease;}
+  [data-reveal].in{opacity:1; transform:none;}
+
+  @media (max-width:980px){
+    nav.primary, .lang-switch, .icon-btn{display:none;}
+    .hamburger{display:flex;}
+    .hero-grid, .grid-2, .catalog, .pd-grid{grid-template-columns:1fr;}
+    .grid-4, .grid-3, .prod-grid, .process-list{grid-template-columns:repeat(2,1fr);}
+    .foot-grid{grid-template-columns:1fr 1fr;}
+    .filters{position:static;}
+    section{padding:56px 0;}
+  }
+  @media (max-width:560px){
+    .grid-4, .grid-3, .prod-grid, .process-list, .form-grid{grid-template-columns:1fr;}
+    .cta-band{padding:34px 20px;}
+    .foot-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<a href="https://wa.me/966000000000" class="wa-float" aria-label="WhatsApp Us" target="_blank">💬</a>
+
+<header class="site" id="siteHeader">
+  <div class="container site-bar">
+    <a href="#/" class="logo">
+      <span class="logo-mark"></span>
+      <span class="logo-text">
+        <b data-i18n="brandEn">GULF OLIVES</b>
+        <span data-i18n="brandAr">زيتون الخليج</span>
+      </span>
+    </a>
+    <nav class="primary">
+      <a href="#/" data-i18n="navHome">Home</a>
+      <a href="#/about" data-i18n="navAbout">About</a>
+      <a href="#/products" data-i18n="navProducts">Products</a>
+      <a href="#/manufacturing" data-i18n="navManufacturing">Manufacturing</a>
+      <a href="#/private-label" data-i18n="navPrivateLabel">Private Label</a>
+      <a href="#/oem" data-i18n="navOem">OEM</a>
+      <a href="#/contact" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="head-actions">
+      <div class="lang-switch">
+        <button data-lang="en" class="active">EN</button>
+        <button data-lang="ar">العربية</button>
+      </div>
+      <a class="icon-btn" href="https://wa.me/966000000000" target="_blank" aria-label="WhatsApp">💬</a>
+      <a class="btn btn-primary btn-sm" href="#/contact" data-i18n="navQuote">Request a Quote</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer-backdrop" id="drawerBackdrop"></div>
+<div class="drawer" id="drawer">
+  <button class="drawer-close" id="drawerClose">✕</button>
+  <a href="#/" class="drawer-link" data-i18n="navHome">Home</a>
+  <a href="#/about" class="drawer-link" data-i18n="navAbout">About</a>
+  <a href="#/products" class="drawer-link" data-i18n="navProducts">Products</a>
+  <a href="#/manufacturing" class="drawer-link" data-i18n="navManufacturing">Manufacturing</a>
+  <a href="#/private-label" class="drawer-link" data-i18n="navPrivateLabel">Private Label</a>
+  <a href="#/oem" class="drawer-link" data-i18n="navOem">OEM</a>
+  <a href="#/contact" class="drawer-link" data-i18n="navContact">Contact</a>
+  <div style="display:flex; gap:10px; margin-top:20px;">
+    <div class="lang-switch" id="drawerLangSwitch">
+      <button data-lang="en" class="active">EN</button>
+      <button data-lang="ar">العربية</button>
+    </div>
+  </div>
+  <a href="#/contact" class="btn btn-primary" style="margin-top:22px; width:100%;" data-i18n="navQuote">Request a Quote</a>
+</div>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<div class="page active" id="page-home">
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="label" data-i18n="heroLabel">Food manufacturer · Saudi Arabia</span>
+        <h1 data-i18n="heroTitle">Food Manufacturing Excellence in Saudi Arabia</h1>
+        <p class="lede" style="margin-top:18px;" data-i18n="heroSub">Manufacturing quality food products for businesses, brands and markets across Saudi Arabia and beyond.</p>
+        <div class="hero-ctas">
+          <a href="#/contact" class="btn btn-primary" data-i18n="ctaQuote">Request a Quote</a>
+          <a href="#/products" class="btn btn-outline" data-i18n="ctaExplore">Explore Products</a>
+          <a href="#/private-label" class="btn btn-gold" data-i18n="ctaPrivateLabel">Private Label Manufacturing</a>
+        </div>
+        <div class="hero-meta">
+          <div><b data-i18n="metaSupply">B2B Supply</b><span data-i18n="metaSupplySub">Distributors &amp; retailers</span></div>
+          <div><b data-i18n="metaPL">Private Label</b><span data-i18n="metaPLSub">Your brand, our production</span></div>
+          <div><b data-i18n="metaExport">GCC &amp; Export Ready</b><span data-i18n="metaExportSub">Built for scale</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="gold-frame"></div>
+        <div class="frame">
+          <img src="https://images.unsplash.com/photo-1615486364474-395a0d7de1f9?q=80&w=900&auto=format&fit=crop" alt="Modern food manufacturing production line">
+          <span class="tag" data-i18n="heroTag">Manufacturer · Scale · Quality</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" data-reveal>
+    <div class="container">
+      <div class="grid-4">
+        <div class="card"><div class="icon">FM</div><h3 data-i18n="capF">Food Manufacturing</h3><p data-i18n="capFSub">End-to-end production for food businesses.</p></div>
+        <div class="card"><div class="icon">PL</div><h3 data-i18n="capPL">Private Label</h3><p data-i18n="capPLSub">Launch products under your own brand.</p></div>
+        <div class="card"><div class="icon">OEM</div><h3 data-i18n="capOEM">OEM Solutions</h3><p data-i18n="capOEMSub">Custom manufacturing to your specification.</p></div>
+        <div class="card"><div class="icon">GCC</div><h3 data-i18n="capGCC">Saudi Arabia &amp; GCC</h3><p data-i18n="capGCCSub">Positioned for regional and export supply.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="container grid-2">
+      <div class="about-visual"><img src="https://images.unsplash.com/photo-1556760544-74068565f05c?q=80&w=900&auto=format&fit=crop" alt="Food production facility"></div>
+      <div>
+        <span class="label" data-i18n="aboutLabel">About Gulf Olives</span>
+        <h2 data-i18n="aboutTitle">A Saudi food manufacturer built for long-term partnerships</h2>
+        <p class="lede" style="margin-top:16px;" data-i18n="aboutBody">Gulf Olives develops and manufactures food products for distributors, retailers and foodservice businesses, with dedicated capability for private label and OEM production at commercial scale.</p>
+        <a href="#/about" class="btn btn-outline" style="margin-top:26px;" data-i18n="ctaDiscover">Discover Gulf Olives</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" data-reveal>
+    <div class="container">
+      <div class="row-head">
+        <div>
+          <span class="label" data-i18n="mfgLabel">Manufacturing</span>
+          <h2 data-i18n="mfgTitle">Manufacturing built for quality and scale</h2>
+        </div>
+        <a href="#/manufacturing" class="btn btn-outline btn-sm" data-i18n="ctaViewMfg">View Manufacturing</a>
+      </div>
+      <div class="grid-4" id="mfgCards">
+        <!-- filled by JS -->
+      </div>
+      <h3 style="margin-top:56px; margin-bottom:8px;" data-i18n="processTitle">Our production process</h3>
+      <div class="timeline" id="processTimeline"></div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="container">
+      <div class="row-head">
+        <div>
+          <span class="label" data-i18n="catLabel">Product portfolio</span>
+          <h2 data-i18n="catTitle">Explore our product categories</h2>
+        </div>
+        <a href="#/products" class="btn btn-outline btn-sm" data-i18n="ctaAllProducts">View All Products</a>
+      </div>
+      <div class="grid-4" id="categoryCards"></div>
+    </div>
+  </section>
+
+  <section class="section-alt" data-reveal>
+    <div class="container">
+      <span class="label" data-i18n="plLabel">Private label</span>
+      <h2 data-i18n="plTitle">Build your own food brand with Gulf Olives</h2>
+      <p class="lede" style="margin-top:14px;" data-i18n="plBody">From product selection to packaging and delivery, we support businesses building their own food brand on our manufacturing base.</p>
+      <ol class="process-list" style="margin-top:36px;" id="plProcess"></ol>
+      <a href="#/private-label" class="btn btn-primary" style="margin-top:32px;" data-i18n="ctaPLStart">Start Your Private Label Project</a>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="container grid-2">
+      <div>
+        <span class="label" data-i18n="oemLabel">OEM manufacturing</span>
+        <h2 data-i18n="oemTitle">Reliable OEM food manufacturing solutions</h2>
+        <p class="lede" style="margin-top:14px;" data-i18n="oemBody">Custom specifications, packaging support and bulk supply — manufactured to your requirements with consistent quality control.</p>
+        <a href="#/oem" class="btn btn-primary" style="margin-top:24px;" data-i18n="ctaOemStart">Discuss Your OEM Requirement</a>
+      </div>
+      <div class="about-visual"><img src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?q=80&w=900&auto=format&fit=crop" alt="OEM food production line"></div>
+    </div>
+  </section>
+
+  <section class="section-alt" data-reveal>
+    <div class="container">
+      <span class="label" data-i18n="whyLabel">Why Gulf Olives</span>
+      <h2 data-i18n="whyTitle" style="margin-bottom:36px;">Built to be a dependable manufacturing partner</h2>
+      <div class="grid-4" id="whyCards"></div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="container">
+      <span class="label" data-i18n="indLabel">Industries we serve</span>
+      <h2 data-i18n="indTitle" style="margin-bottom:36px;">Supporting businesses across the food supply chain</h2>
+      <div class="grid-4" id="industryCards"></div>
+      <div style="text-align:center; margin-top:32px;">
+        <a href="#/contact" class="btn btn-outline" data-i18n="ctaB2BTeam">Talk to Our B2B Team</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt" data-reveal>
+    <div class="container grid-2">
+      <div>
+        <span class="label" data-i18n="qualLabel">Quality &amp; food safety</span>
+        <h2 data-i18n="qualTitle">Quality you can build your business on</h2>
+        <p class="lede" style="margin-top:14px;" data-i18n="qualBody">Consistent quality control, ingredient management and traceability across every stage of production.</p>
+      </div>
+      <ul class="pd-specs" id="qualList" style="margin:0;"></ul>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="container grid-2">
+      <div>
+        <span class="label" data-i18n="expLabel">Export</span>
+        <h2 data-i18n="expTitle">From Saudi Arabia to regional and global markets</h2>
+        <p class="lede" style="margin-top:14px;" data-i18n="expBody">We supply Saudi Arabia today, with manufacturing capability structured for GCC and future export markets — including private label and OEM export projects.</p>
+        <a href="#/contact" class="btn btn-outline" style="margin-top:24px;" data-i18n="ctaExport">Discuss Export Opportunities</a>
+      </div>
+      <div class="about-visual"><img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?q=80&w=900&auto=format&fit=crop" alt="Export shipping and logistics"></div>
+    </div>
+  </section>
+
+  <section class="section-alt" data-reveal>
+    <div class="container">
+      <div class="row-head">
+        <div>
+          <span class="label" data-i18n="featLabel">Featured products</span>
+          <h2 data-i18n="featTitle">A glimpse of our range</h2>
+        </div>
+        <a href="#/products" class="btn btn-outline btn-sm" data-i18n="ctaAllProducts">View All Products</a>
+      </div>
+      <div class="prod-grid" id="featuredProducts"></div>
+    </div>
+  </section>
+
+  <section data-reveal>
+    <div class="container">
+      <div class="cta-band">
+        <h2 data-i18n="finalCtaTitle">Let's build your next food product</h2>
+        <p data-i18n="finalCtaBody">Whether you are sourcing food products, developing a private label or looking for an OEM manufacturing partner, our team is ready to discuss your requirements.</p>
+        <div class="btns">
+          <a href="#/contact" class="btn btn-gold" data-i18n="ctaQuote">Request a Quote</a>
+          <a href="#/private-label" class="btn btn-outline" data-i18n="navPrivateLabel">Private Label Enquiry</a>
+          <a href="#/contact" class="btn btn-outline" data-i18n="navContact">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<div class="page" id="page-about">
+  <section>
+    <div class="container">
+      <p class="breadcrumb"><a href="#/" data-i18n="navHome">Home</a> / <span data-i18n="navAbout">About</span></p>
+      <span class="label" data-i18n="aboutLabel">About Gulf Olives</span>
+      <h1 data-i18n="aboutTitle">A Saudi food manufacturer built for long-term partnerships</h1>
+      <p class="lede" style="margin-top:18px;" data-i18n="aboutBodyLong">Gulf Olives is a Saudi Arabia-based food manufacturing company focused on product development, consistent supply, private label manufacturing and OEM solutions for B2B partners. We work with distributors, wholesalers, retailers and foodservice businesses that need a manufacturing partner they can build a long-term relationship with.</p>
+      <div class="grid-4" style="margin-top:48px;" id="mfgCardsAbout"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ MANUFACTURING ============ -->
+<div class="page" id="page-manufacturing">
+  <section>
+    <div class="container">
+      <p class="breadcrumb"><a href="#/" data-i18n="navHome">Home</a> / <span data-i18n="navManufacturing">Manufacturing</span></p>
+      <span class="label" data-i18n="mfgLabel">Manufacturing</span>
+      <h1 data-i18n="mfgTitle">Manufacturing built for quality and scale</h1>
+      <div class="grid-4" style="margin-top:40px;" id="mfgCardsPage"></div>
+      <h3 style="margin-top:56px;" data-i18n="processTitle">Our production process</h3>
+      <div class="timeline" id="processTimelinePage"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PRODUCTS (CATALOG) ============ -->
+<div class="page" id="page-products">
+  <section style="padding-top:48px;">
+    <div class="container">
+      <p class="breadcrumb"><a href="#/" data-i18n="navHome">Home</a> / <span data-i18n="navProducts">Products</span></p>
+      <span class="label" data-i18n="catLabel">Product portfolio</span>
+      <h1 data-i18n="catalogTitle" style="margin-bottom:32px;">Product Catalog</h1>
+      <div class="catalog">
+        <aside class="filters">
+          <div class="search-box">
+            <input type="text" id="prodSearch" data-i18n-ph="searchPh" placeholder="Search products...">
+            <button id="prodSearchBtn">🔍</button>
+          </div>
+          <div class="filter-group">
+            <h4 data-i18n="filterCategory">Category</h4>
+            <div id="filterCategoryList"></div>
+          </div>
+          <div class="filter-group">
+            <h4 data-i18n="filterAvail">Availability</h4>
+            <label><input type="checkbox" id="filterPL"> <span data-i18n="filterPLLabel">Private Label Available</span></label>
+            <label><input type="checkbox" id="filterOEM"> <span data-i18n="filterOEMLabel">OEM Available</span></label>
+          </div>
+          <button class="btn btn-outline btn-sm" id="clearFilters" style="width:100%;" data-i18n="filterClear">Clear Filters</button>
+        </aside>
+        <div>
+          <div class="catalog-top">
+            <span id="resultCount" style="color:var(--ink-soft); font-size:.9rem;"></span>
+            <select id="sortSelect">
+              <option value="featured" data-i18n="sortFeatured">Featured</option>
+              <option value="az" data-i18n="sortAZ">A–Z</option>
+              <option value="category" data-i18n="sortCat">Category</option>
+            </select>
+          </div>
+          <div class="prod-grid" id="prodGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PRODUCT DETAIL ============ -->
+<div class="page" id="page-product-detail">
+  <section style="padding-top:48px;">
+    <div class="container">
+      <p class="breadcrumb" id="pdBreadcrumb"></p>
+      <div class="pd-grid" id="pdContent"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ PRIVATE LABEL ============ -->
+<div class="page" id="page-private-label">
+  <section>
+    <div class="container">
+      <p class="breadcrumb"><a href="#/" data-i18n="navHome">Home</a> / <span data-i18n="navPrivateLabel">Private Label</span></p>
+      <span class="label" data-i18n="plLabel">Private label</span>
+      <h1 data-i18n="plTitle">Build your own food brand with Gulf Olives</h1>
+      <p class="lede" style="margin-top:16px;" data-i18n="plBodyLong">Gulf Olives supports businesses looking to develop and launch food products under their own brand — from product selection through production, packaging and delivery.</p>
+      <ol class="process-list" style="margin-top:40px;" id="plProcessPage"></ol>
+
+      <h2 style="margin-top:64px; margin-bottom:24px;" data-i18n="plFormTitle">Start your private label project</h2>
+      <form class="enquiry" id="plForm">
+        <div class="form-grid">
+          <div class="form-field"><label data-i18n="fCompany">Company Name</label><input type="text" required></div>
+          <div class="form-field"><label data-i18n="fContact">Contact Person</label><input type="text" required></div>
+          <div class="form-field"><label data-i18n="fEmail">Email</label><input type="email" required></div>
+          <div class="form-field"><label data-i18n="fPhone">Phone / WhatsApp</label><input type="tel" required></div>
+          <div class="form-field"><label data-i18n="fCountry">Country</label><input type="text"></div>
+          <div class="form-field"><label data-i18n="fCategory">Product Category</label>
+            <select><option data-i18n="optSelect">Select a category</option></select>
+          </div>
+          <div class="form-field"><label data-i18n="fQty">Estimated Quantity</label><input type="text"></div>
+          <div class="form-field"><label data-i18n="fPackaging">Packaging Requirements</label><input type="text"></div>
+          <div class="form-field full"><label data-i18n="fMessage">Message</label><textarea></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-primary" data-i18n="fSubmitPL">Submit Private Label Enquiry</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+<!-- ============ OEM ============ -->
+<div class="page" id="page-oem">
+  <section>
+    <div class="container">
+      <p class="breadcrumb"><a href="#/" data-i18n="navHome">Home</a> / <span data-i18n="navOem">OEM</span></p>
+      <span class="label" data-i18n="oemLabel">OEM manufacturing</span>
+      <h1 data-i18n="oemTitle">Reliable OEM food manufacturing solutions</h1>
+      <p class="lede" style="margin-top:16px;" data-i18n="oemBodyLong">We provide business-to-business OEM manufacturing with customized specifications, packaging support, production planning and quality assurance for bulk supply requirements.</p>
+      <div class="grid-4" style="margin-top:40px;" id="oemCards"></div>
+      <div style="margin-top:44px;">
+        <a href="#/contact" class="btn btn-primary" data-i18n="ctaOemStart">Discuss Your OEM Requirement</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ CONTACT ============ -->
+<div class="page" id="page-contact">
+  <section>
+    <div class="container grid-2">
+      <div>
+        <span class="label" data-i18n="contactLabel">Contact</span>
+        <h1 data-i18n="contactTitle">Get in touch with Gulf Olives</h1>
+        <p class="lede" style="margin-top:16px;" data-i18n="contactBody">For quotes, wholesale supply, private label or OEM enquiries, reach our B2B team directly.</p>
+        <ul class="pd-specs" style="margin-top:28px;">
+          <li><span data-i18n="fCompanyLbl">Company</span><b data-i18n="brandEn">GULF OLIVES</b></li>
+          <li><span data-i18n="fCountryLbl">Country</span><b data-i18n="saudi">Saudi Arabia</b></li>
+          <li><span>Phone</span><b>[ Phone number placeholder ]</b></li>
+          <li><span>WhatsApp</span><b>[ WhatsApp number placeholder ]</b></li>
+          <li><span>Email</span><b>[ Email placeholder ]</b></li>
+        </ul>
+        <a href="https://wa.me/966000000000" class="btn btn-gold" style="margin-top:20px;" target="_blank" data-i18n="ctaWa">WhatsApp Us</a>
+      </div>
+      <form class="enquiry" id="contactForm">
+        <div class="form-grid">
+          <div class="form-field"><label data-i18n="fFullName">Full Name</label><input type="text" required></div>
+          <div class="form-field"><label data-i18n="fCompany">Company Name</label><input type="text"></div>
+          <div class="form-field"><label data-i18n="fEmail">Email</label><input type="email" required></div>
+          <div class="form-field"><label data-i18n="fPhone">Phone</label><input type="tel"></div>
+          <div class="form-field"><label data-i18n="fCountry">Country</label><input type="text"></div>
+          <div class="form-field"><label data-i18n="fBizType">Business Type</label><input type="text"></div>
+          <div class="form-field full"><label data-i18n="fReqType">Requirement</label>
+            <select>
+              <option data-i18n="optProduct">Product Inquiry</option>
+              <option data-i18n="optWholesale">Wholesale Inquiry</option>
+              <option data-i18n="optPL">Private Label</option>
+              <option data-i18n="optOEM">OEM Manufacturing</option>
+              <option data-i18n="optExport">Export</option>
+              <option data-i18n="optGeneral">General Inquiry</option>
+            </select>
+          </div>
+          <div class="form-field full"><label data-i18n="fMessage">Message</label><textarea></textarea></div>
+        </div>
+        <button type="submit" class="btn btn-primary" data-i18n="fSubmitEnquiry">Send Enquiry</button>
+      </form>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo"><span class="logo-mark" style="border-color:var(--gold);"></span><span class="logo-text"><b style="color:#fff;" data-i18n="brandEn">GULF OLIVES</b><span style="color:var(--gold);" data-i18n="brandAr">زيتون الخليج</span></span></div>
+        <p class="foot-desc" data-i18n="footDesc">A Saudi Arabia-based food manufacturer supplying B2B partners, private label brands and OEM clients.</p>
+      </div>
+      <div>
+        <h4 data-i18n="footCompany">Company</h4>
+        <a href="#/about" data-i18n="navAbout">About</a>
+        <a href="#/manufacturing" data-i18n="navManufacturing">Manufacturing</a>
+        <a href="#/" data-i18n="footQuality">Quality</a>
+        <a href="#/" data-i18n="footExport">Export</a>
+      </div>
+      <div>
+        <h4 data-i18n="footSolutions">Solutions</h4>
+        <a href="#/private-label" data-i18n="navPrivateLabel">Private Label</a>
+        <a href="#/oem" data-i18n="navOem">OEM Manufacturing</a>
+        <a href="#/" data-i18n="footB2B">B2B Supply</a>
+        <a href="#/" data-i18n="footWholesale">Wholesale</a>
+      </div>
+      <div>
+        <h4 data-i18n="footProducts">Products</h4>
+        <a href="#/products" data-i18n="footCategories">Product Categories</a>
+        <a href="#/products" data-i18n="footAllProducts">All Products</a>
+        <a href="#/products" data-i18n="footFeatured">Featured Products</a>
+      </div>
+      <div>
+        <h4 data-i18n="navContact">Contact</h4>
+        <a href="#/contact" data-i18n="saudi">Saudi Arabia</a>
+        <a href="tel:+966000000000">[ Phone placeholder ]</a>
+        <a href="https://wa.me/966000000000" target="_blank">[ WhatsApp placeholder ]</a>
+        <a href="mailto:info@gulfolives.example">[ Email placeholder ]</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 <span data-i18n="brandEn">GULF OLIVES</span> — <span data-i18n="footCoName">Food Manufacturing Company</span></span>
+      <span>
+        <a href="#" data-i18n="footPrivacy">Privacy Policy</a> ·
+        <a href="#" data-i18n="footTerms">Terms</a> ·
+        <a href="#" data-i18n="footCookie">Cookie Policy</a> ·
+        <span>English | العربية</span>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ===================== DATA LAYER (CMS-ready structure) ===================== */
+const CATEGORIES = [
+  {id:'veg-paste', en:'Vegetable Pastes', ar:'معجون الخضروات', img:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=700&auto=format&fit=crop'},
+  {id:'prepared-veg', en:'Pickled & Prepared Vegetables', ar:'خضروات مجهزة ومخللة', img:'https://images.unsplash.com/photo-1601000937281-7ddf47fef1c4?q=80&w=700&auto=format&fit=crop'},
+  {id:'labneh-dairy', en:'Labneh & Dairy Products', ar:'لبنة ومنتجات الألبان', img:'https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=700&auto=format&fit=crop'},
+  {id:'olives', en:'Olives', ar:'زيتون', img:'https://images.unsplash.com/photo-1593001874117-c99c800e3eb8?q=80&w=700&auto=format&fit=crop'},
+];
+
+// Scalable product data structure — designed to later connect to a headless CMS / product database.
+const PRODUCTS = [
+  {sku:'DLY-GP-001', name_en:'Garlic Paste', name_ar:'معجون الثوم', brand:'Daily', category:'veg-paste',
+   desc_en:'Ready-to-use garlic paste for food service and retail.', desc_ar:'معجون ثوم جاهز للاستخدام للمطاعم والتجزئة.',
+   packaging:'Jar / Pouch', private_label:true, oem:true,
+   img:'https://images.unsplash.com/photo-1615485500704-8e990f9900f7?q=80&w=700&auto=format&fit=crop'},
+  {sku:'DLY-GGP-002', name_en:'Ginger Garlic Paste', name_ar:'معجون الزنجبيل والثوم', brand:'Daily', category:'veg-paste',
+   desc_en:'Blended ginger-garlic paste for everyday cooking applications.', desc_ar:'معجون مزيج الزنجبيل والثوم لتطبيقات الطهي اليومية.',
+   packaging:'Jar / Pouch', private_label:true, oem:true,
+   img:'https://images.unsplash.com/photo-1599909636956-25e0cb6d9c19?q=80&w=700&auto=format&fit=crop'},
+  {sku:'DLY-GNP-003', name_en:'Ginger Paste', name_ar:'معجون الزنجبيل', brand:'Daily', category:'veg-paste',
+   desc_en:'Smooth ginger paste made for consistent everyday use.', desc_ar:'معجون زنجبيل ناعم لاستخدام يومي ثابت الجودة.',
+   packaging:'Jar / Pouch', private_label:true, oem:true,
+   img:'https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?q=80&w=700&auto=format&fit=crop'},
+  {sku:'DLY-GCP-004', name_en:'Green Chilly Paste', name_ar:'معجون الفلفل الأخضر', brand:'Daily', category:'veg-paste',
+   desc_en:'Fresh green chilly paste for retail and foodservice kitchens.', desc_ar:'معجون فلفل أخضر طازج للتجزئة والمطابخ التجارية.',
+   packaging:'Jar / Pouch', private_label:true, oem:true,
+   img:'https://images.unsplash.com/photo-1583119912267-cc97c911e416?q=80&w=700&auto=format&fit=crop'},
+  {sku:'DLY-RCP-005', name_en:'Red Chilly Paste', name_ar:'معجون الفلفل الأحمر', brand:'Daily', category:'veg-paste',
+   desc_en:'Rich red chilly paste suited to a wide range of cuisines.', desc_ar:'معجون فلفل أحمر غني يناسب مجموعة واسعة من المأكولات.',
+   packaging:'Jar / Pouch', private_label:true, oem:true,
+   img:'https://images.unsplash.com/photo-1583119022894-919a68a3d0e3?q=80&w=700&auto=format&fit=crop'},
+  {sku:'DLY-TMP-006', name_en:'Tamarind Paste', name_ar:'معجون التمر الهندي', brand:'Daily', category:'veg-paste',
+   desc_en:'Tangy tamarind paste for sauces, marinades and cooking.', desc_ar:'معجون تمر هندي حامض للصلصات والتتبيلات والطهي.',
+   packaging:'Jar / Pouch', private_label:true, oem:true,
+   img:'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=700&auto=format&fit=crop'},
+  {sku:'DLY-MET-007', name_en:'Mixed Eggplants with Tahina — Regular', name_ar:'باذنجان مشكل بالطحينة — عادي', brand:'Daily', category:'prepared-veg',
+   desc_en:'Prepared mixed eggplant with tahina, regular flavor.', desc_ar:'باذنجان مشكل محضّر مع الطحينة بنكهة عادية.',
+   packaging:'Jar', private_label:true, oem:false,
+   img:'https://images.unsplash.com/photo-1601000937281-7ddf47fef1c4?q=80&w=700&auto=format&fit=crop'},
+  {sku:'DLY-MES-008', name_en:'Mixed Eggplants with Tahina — Spicy', name_ar:'باذنجان مشكل بالطحينة — حار', brand:'Daily', category:'prepared-veg',
+   desc_en:'Prepared mixed eggplant with tahina, spicy flavor.', desc_ar:'باذنجان مشكل محضّر مع الطحينة بنكهة حارة.',
+   packaging:'Jar', private_label:true, oem:false,
+   img:'https://images.unsplash.com/photo-1601000937229-8e0e91cb1c94?q=80&w=700&auto=format&fit=crop'},
+  {sku:'PLN-LBN-009', name_en:'Labneh Mixes', name_ar:'خلطات اللبنة', brand:'Polina', category:'labneh-dairy',
+   desc_en:'Labneh product line for retail and foodservice.', desc_ar:'تشكيلة منتجات اللبنة للتجزئة والمطاعم.',
+   packaging:'Tub', private_label:true, oem:true,
+   img:'https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=700&auto=format&fit=crop'},
+];
+
+const MFG_CAPS = [
+  {en:'Food Processing', ar:'تصنيع غذائي'}, {en:'Product Development', ar:'تطوير المنتجات'},
+  {en:'Private Label Production', ar:'إنتاج العلامة الخاصة'}, {en:'OEM Manufacturing', ar:'تصنيع OEM'},
+  {en:'Packaging Solutions', ar:'حلول التعبئة والتغليف'}, {en:'Quality Control', ar:'ضبط الجودة'},
+  {en:'Production Planning', ar:'تخطيط الإنتاج'}, {en:'B2B Supply', ar:'التوريد للشركات'},
+];
+const PROCESS_STEPS = [
+  {en:'Product Concept', ar:'فكرة المنتج'}, {en:'Ingredient Selection', ar:'اختيار المكونات'},
+  {en:'Product Development', ar:'تطوير المنتج'}, {en:'Production', ar:'الإنتاج'},
+  {en:'Quality Control', ar:'ضبط الجودة'}, {en:'Packaging', ar:'التعبئة والتغليف'}, {en:'Distribution', ar:'التوزيع'},
+];
+const PL_PROCESS = [
+  {en:'Share Your Requirements', ar:'شارك متطلباتك', den:'Tell us about your product idea and target market.', dar:'أخبرنا عن فكرة منتجك والسوق المستهدف.'},
+  {en:'Product Selection & Development', ar:'اختيار وتطوير المنتج', den:'We match your requirement to our production capability.', dar:'نطابق متطلباتك مع قدراتنا الإنتاجية.'},
+  {en:'Packaging & Labeling', ar:'التعبئة ووضع الملصقات', den:'Packaging built around your brand identity.', dar:'تعبئة وتغليف يعكس هوية علامتك التجارية.'},
+  {en:'Production', ar:'الإنتاج', den:'Manufacturing at your required volume.', dar:'تصنيع بالحجم المطلوب.'},
+  {en:'Quality Control', ar:'ضبط الجودة', den:'Every batch checked before it leaves the facility.', dar:'فحص كل دفعة قبل مغادرتها المنشأة.'},
+  {en:'Delivery', ar:'التسليم', den:'Coordinated delivery to your business.', dar:'تسليم منسق إلى منشأتك.'},
+];
+const OEM_POINTS = [
+  {en:'Product Manufacturing', ar:'تصنيع المنتجات'}, {en:'Customized Specifications', ar:'مواصفات مخصصة'},
+  {en:'Packaging Support', ar:'دعم التعبئة والتغليف'}, {en:'Quality Assurance', ar:'ضمان الجودة'},
+];
+const WHY_CARDS = [
+  {en:'Manufacturing Expertise', ar:'خبرة تصنيعية'}, {en:'Quality Focus', ar:'التركيز على الجودة'},
+  {en:'Scalable Production', ar:'إنتاج قابل للتوسع'}, {en:'Flexible B2B Solutions', ar:'حلول مرنة للشركات'},
+];
+const INDUSTRIES = [
+  {en:'Hotels & Restaurants', ar:'الفنادق والمطاعم'}, {en:'Catering Companies', ar:'شركات التموين'},
+  {en:'Supermarkets & Hypermarkets', ar:'الأسواق المركزية والهايبرماركت'}, {en:'Distributors & Wholesalers', ar:'الموزعون وتجار الجملة'},
+];
+const QUALITY_ITEMS = [
+  {en:'Quality Control', ar:'ضبط الجودة'}, {en:'Ingredient Management', ar:'إدارة المكونات'},
+  {en:'Production Control', ar:'مراقبة الإنتاج'}, {en:'Traceability', ar:'إمكانية التتبع'},
+  {en:'Certifications', ar:'الشهادات', note_en:'Halal · HACCP · ISO · SFDA — shown once verified', note_ar:'حلال · HACCP · ISO · SFDA — تُعرض عند التحقق'},
+];
+
+/* ===================== TRANSLATIONS ===================== */
+const I18N = {
+  en:{
+    brandEn:'GULF OLIVES', brandAr:'Gulf Olives Food Manufacturing',
+    navHome:'Home', navAbout:'About', navProducts:'Products', navManufacturing:'Manufacturing',
+    navPrivateLabel:'Private Label', navOem:'OEM', navContact:'Contact', navQuote:'Request a Quote',
+    heroLabel:'Food manufacturer · Saudi Arabia',
+    heroTitle:'Food Manufacturing Excellence in Saudi Arabia',
+    heroSub:'Manufacturing quality food products for businesses, brands and markets across Saudi Arabia and beyond.',
+    heroTag:'Manufacturer · Scale · Quality',
+    ctaQuote:'Request a Quote', ctaExplore:'Explore Products', ctaPrivateLabel:'Private Label Manufacturing',
+    metaSupply:'B2B Supply', metaSupplySub:'Distributors & retailers',
+    metaPL:'Private Label', metaPLSub:'Your brand, our production',
+    metaExport:'GCC & Export Ready', metaExportSub:'Built for scale',
+    capF:'Food Manufacturing', capFSub:'End-to-end production for food businesses.',
+    capPL:'Private Label', capPLSub:'Launch products under your own brand.',
+    capOEM:'OEM Solutions', capOEMSub:'Custom manufacturing to your specification.',
+    capGCC:'Saudi Arabia & GCC', capGCCSub:'Positioned for regional and export supply.',
+    aboutLabel:'About Gulf Olives', aboutTitle:'A Saudi food manufacturer built for long-term partnerships',
+    aboutBody:'Gulf Olives develops and manufactures food products for distributors, retailers and foodservice businesses, with dedicated capability for private label and OEM production at commercial scale.',
+    aboutBodyLong:'Gulf Olives is a Saudi Arabia-based food manufacturing company focused on product development, consistent supply, private label manufacturing and OEM solutions for B2B partners. We work with distributors, wholesalers, retailers and foodservice businesses that need a manufacturing partner they can build a long-term relationship with.',
+    ctaDiscover:'Discover Gulf Olives',
+    mfgLabel:'Manufacturing', mfgTitle:'Manufacturing built for quality and scale', ctaViewMfg:'View Manufacturing',
+    processTitle:'Our production process',
+    catLabel:'Product portfolio', catTitle:'Explore our product categories', ctaAllProducts:'View All Products',
+    plLabel:'Private label', plTitle:'Build your own food brand with Gulf Olives',
+    plBody:'From product selection to packaging and delivery, we support businesses building their own food brand on our manufacturing base.',
+    plBodyLong:'Gulf Olives supports businesses looking to develop and launch food products under their own brand — from product selection through production, packaging and delivery.',
+    ctaPLStart:'Start Your Private Label Project',
+    oemLabel:'OEM manufacturing', oemTitle:'Reliable OEM food manufacturing solutions',
+    oemBody:'Custom specifications, packaging support and bulk supply — manufactured to your requirements with consistent quality control.',
+    oemBodyLong:'We provide business-to-business OEM manufacturing with customized specifications, packaging support, production planning and quality assurance for bulk supply requirements.',
+    ctaOemStart:'Discuss Your OEM Requirement',
+    whyLabel:'Why Gulf Olives', whyTitle:'Built to be a dependable manufacturing partner',
+    indLabel:'Industries we serve', indTitle:'Supporting businesses across the food supply chain', ctaB2BTeam:'Talk to Our B2B Team',
+    qualLabel:'Quality & food safety', qualTitle:'Quality you can build your business on',
+    qualBody:'Consistent quality control, ingredient management and traceability across every stage of production.',
+    expLabel:'Export', expTitle:'From Saudi Arabia to regional and global markets',
+    expBody:'We supply Saudi Arabia today, with manufacturing capability structured for GCC and future export markets — including private label and OEM export projects.',
+    ctaExport:'Discuss Export Opportunities',
+    featLabel:'Featured products', featTitle:"A glimpse of our range",
+    finalCtaTitle:"Let's build your next food product",
+    finalCtaBody:'Whether you are sourcing food products, developing a private label or looking for an OEM manufacturing partner, our team is ready to discuss your requirements.',
+    catalogTitle:'Product Catalog', searchPh:'Search products...',
+    filterCategory:'Category', filterAvail:'Availability', filterPLLabel:'Private Label Available', filterOEMLabel:'OEM Available', filterClear:'Clear Filters',
+    sortFeatured:'Featured', sortAZ:'A–Z', sortCat:'Category',
+    viewProduct:'View Product', requestInfo:'Request Product Information',
+    plFormTitle:'Start your private label project',
+    fCompany:'Company Name', fContact:'Contact Person', fEmail:'Email', fPhone:'Phone / WhatsApp',
+    fCountry:'Country', fCategory:'Product Category', fQty:'Estimated Quantity', fPackaging:'Packaging Requirements',
+    fMessage:'Message', fSubmitPL:'Submit Private Label Enquiry', optSelect:'Select a category',
+    fFullName:'Full Name', fBizType:'Business Type', fReqType:'Requirement', fSubmitEnquiry:'Send Enquiry',
+    optProduct:'Product Inquiry', optWholesale:'Wholesale Inquiry', optPL:'Private Label', optOEM:'OEM Manufacturing', optExport:'Export', optGeneral:'General Inquiry',
+    contactLabel:'Contact', contactTitle:'Get in touch with Gulf Olives',
+    contactBody:'For quotes, wholesale supply, private label or OEM enquiries, reach our B2B team directly.',
+    fCompanyLbl:'Company', fCountryLbl:'Country', saudi:'Saudi Arabia', ctaWa:'WhatsApp Us',
+    footDesc:'A Saudi Arabia-based food manufacturer supplying B2B partners, private label brands and OEM clients.',
+    footCompany:'Company', footQuality:'Quality', footExport:'Export',
+    footSolutions:'Solutions', footB2B:'B2B Supply', footWholesale:'Wholesale',
+    footProducts:'Products', footCategories:'Product Categories', footAllProducts:'All Products', footFeatured:'Featured Products',
+    footCoName:'Food Manufacturing Company', footPrivacy:'Privacy Policy', footTerms:'Terms', footCookie:'Cookie Policy',
+    thankYou:'Thank you — your enquiry has been noted. Our B2B team will follow up shortly.',
+    quoteReq:'Request Quote', waEnquiry:'WhatsApp Enquiry', plEnquiryCta:'Looking for this product under your own brand?', plEnquiryBtn:'Private Label Enquiry',
+    tabDesc:'Description', tabApp:'Applications', tabPack:'Packaging', tabCert:'Certifications',
+    specCategory:'Category', specPackaging:'Packaging', specSku:'SKU', specPL:'Private Label', specOEM:'OEM Available', yes:'Yes', no:'On request',
+  },
+  ar:{
+    brandEn:'زيتون الخليج', brandAr:'شركة زيتون الخليج لتصنيع الأغذية',
+    navHome:'الرئيسية', navAbout:'من نحن', navProducts:'المنتجات', navManufacturing:'التصنيع',
+    navPrivateLabel:'العلامة الخاصة', navOem:'التصنيع بالعقد', navContact:'اتصل بنا', navQuote:'اطلب عرض سعر',
+    heroLabel:'مصنع أغذية · المملكة العربية السعودية',
+    heroTitle:'التميّز في تصنيع الأغذية بالمملكة العربية السعودية',
+    heroSub:'نصنّع منتجات غذائية عالية الجودة للشركات والعلامات التجارية والأسواق داخل المملكة وخارجها.',
+    heroTag:'مصنّع · حجم إنتاج · جودة',
+    ctaQuote:'اطلب عرض سعر', ctaExplore:'استعرض المنتجات', ctaPrivateLabel:'تصنيع العلامة الخاصة',
+    metaSupply:'توريد للشركات', metaSupplySub:'الموزعون وتجار التجزئة',
+    metaPL:'العلامة الخاصة', metaPLSub:'علامتك التجارية، إنتاجنا',
+    metaExport:'جاهز للخليج والتصدير', metaExportSub:'مبني للتوسع',
+    capF:'تصنيع غذائي', capFSub:'إنتاج متكامل للشركات الغذائية.',
+    capPL:'العلامة الخاصة', capPLSub:'أطلق منتجاتك تحت علامتك التجارية.',
+    capOEM:'حلول OEM', capOEMSub:'تصنيع مخصص وفق مواصفاتك.',
+    capGCC:'السعودية ودول الخليج', capGCCSub:'جاهزون للتوريد الإقليمي والتصدير.',
+    aboutLabel:'من نحن', aboutTitle:'مصنع أغذية سعودي مبني على الشراكات طويلة الأمد',
+    aboutBody:'تقوم زيتون الخليج بتطوير وتصنيع منتجات غذائية للموزعين وتجار التجزئة وقطاع المطاعم، مع قدرة مخصصة لتصنيع العلامة الخاصة والتصنيع بالعقد على نطاق تجاري.',
+    aboutBodyLong:'زيتون الخليج شركة تصنيع أغذية مقرها المملكة العربية السعودية، تركّز على تطوير المنتجات والتوريد المستمر وتصنيع العلامة الخاصة وحلول OEM لشركاء الأعمال. نعمل مع الموزعين وتجار الجملة والتجزئة وقطاع المطاعم الباحثين عن شريك تصنيع لعلاقة طويلة الأمد.',
+    ctaDiscover:'تعرّف على زيتون الخليج',
+    mfgLabel:'التصنيع', mfgTitle:'تصنيع مبني على الجودة وقابلية التوسع', ctaViewMfg:'عرض التصنيع',
+    processTitle:'مراحل الإنتاج لدينا',
+    catLabel:'تشكيلة المنتجات', catTitle:'استعرض فئات منتجاتنا', ctaAllProducts:'عرض كل المنتجات',
+    plLabel:'العلامة الخاصة', plTitle:'أطلق علامتك الغذائية الخاصة مع زيتون الخليج',
+    plBody:'من اختيار المنتج إلى التعبئة والتسليم، ندعم الشركات الراغبة في بناء علامتها الغذائية الخاصة على قاعدتنا التصنيعية.',
+    plBodyLong:'تدعم زيتون الخليج الشركات الراغبة في تطوير وإطلاق منتجات غذائية تحت علامتها التجارية الخاصة — من اختيار المنتج مرورًا بالإنتاج والتعبئة وحتى التسليم.',
+    ctaPLStart:'ابدأ مشروع علامتك الخاصة',
+    oemLabel:'التصنيع بالعقد', oemTitle:'حلول تصنيع OEM موثوقة للأغذية',
+    oemBody:'مواصفات مخصصة، دعم في التعبئة والتوريد بالجملة — تصنيع وفق متطلباتك مع ضبط جودة ثابت.',
+    oemBodyLong:'نقدّم تصنيعًا للشركات (OEM) بمواصفات مخصصة ودعم في التعبئة والتغليف وتخطيط الإنتاج وضمان الجودة لمتطلبات التوريد بالجملة.',
+    ctaOemStart:'ناقش متطلبات OEM الخاصة بك',
+    whyLabel:'لماذا زيتون الخليج', whyTitle:'شريك تصنيع يمكن الاعتماد عليه',
+    indLabel:'القطاعات التي نخدمها', indTitle:'ندعم الشركات عبر سلسلة توريد الأغذية', ctaB2BTeam:'تحدث مع فريق الشركات لدينا',
+    qualLabel:'الجودة وسلامة الغذاء', qualTitle:'جودة يمكنك بناء أعمالك عليها',
+    qualBody:'ضبط جودة ثابت وإدارة للمكونات وإمكانية تتبع في كل مرحلة من مراحل الإنتاج.',
+    expLabel:'التصدير', expTitle:'من المملكة العربية السعودية إلى الأسواق الإقليمية والعالمية',
+    expBody:'نورّد إلى المملكة العربية السعودية حاليًا، مع قدرة تصنيعية مهيأة لدول الخليج وأسواق التصدير المستقبلية — بما في ذلك مشاريع العلامة الخاصة وOEM للتصدير.',
+    ctaExport:'ناقش فرص التصدير',
+    featLabel:'منتجات مختارة', featTitle:'لمحة عن تشكيلتنا',
+    finalCtaTitle:'لنصنع منتجك الغذائي القادم معًا',
+    finalCtaBody:'سواء كنت تبحث عن توريد منتجات غذائية أو تطوير علامة خاصة أو شريك تصنيع OEM، فريقنا جاهز لمناقشة متطلباتك.',
+    catalogTitle:'كتالوج المنتجات', searchPh:'ابحث عن منتج...',
+    filterCategory:'الفئة', filterAvail:'التوفر', filterPLLabel:'متاح للعلامة الخاصة', filterOEMLabel:'متاح OEM', filterClear:'مسح الفلاتر',
+    sortFeatured:'مميز', sortAZ:'أ-ي', sortCat:'الفئة',
+    viewProduct:'عرض المنتج', requestInfo:'اطلب معلومات عن المنتج',
+    plFormTitle:'ابدأ مشروع علامتك الخاصة',
+    fCompany:'اسم الشركة', fContact:'الشخص المسؤول', fEmail:'البريد الإلكتروني', fPhone:'الهاتف / واتساب',
+    fCountry:'الدولة', fCategory:'فئة المنتج', fQty:'الكمية التقديرية', fPackaging:'متطلبات التعبئة',
+    fMessage:'الرسالة', fSubmitPL:'إرسال طلب العلامة الخاصة', optSelect:'اختر فئة',
+    fFullName:'الاسم الكامل', fBizType:'نوع النشاط التجاري', fReqType:'نوع الطلب', fSubmitEnquiry:'إرسال الطلب',
+    optProduct:'استفسار عن منتج', optWholesale:'استفسار جملة', optPL:'علامة خاصة', optOEM:'تصنيع OEM', optExport:'تصدير', optGeneral:'استفسار عام',
+    contactLabel:'اتصل بنا', contactTitle:'تواصل مع زيتون الخليج',
+    contactBody:'لطلبات عروض الأسعار والتوريد بالجملة والعلامة الخاصة وOEM، تواصل مع فريق الشركات لدينا مباشرة.',
+    fCompanyLbl:'الشركة', fCountryLbl:'الدولة', saudi:'المملكة العربية السعودية', ctaWa:'راسلنا عبر واتساب',
+    footDesc:'مصنع أغذية مقره المملكة العربية السعودية يورّد لشركاء الأعمال والعلامات الخاصة وعملاء OEM.',
+    footCompany:'الشركة', footQuality:'الجودة', footExport:'التصدير',
+    footSolutions:'الحلول', footB2B:'توريد للشركات', footWholesale:'الجملة',
+    footProducts:'المنتجات', footCategories:'فئات المنتجات', footAllProducts:'كل المنتجات', footFeatured:'منتجات مميزة',
+    footCoName:'شركة تصنيع الأغذية', footPrivacy:'سياسة الخصوصية', footTerms:'الشروط', footCookie:'سياسة الكوكيز',
+    thankYou:'شكرًا لك — تم استلام طلبك. سيتواصل معك فريق الشركات قريبًا.',
+    quoteReq:'اطلب عرض سعر', waEnquiry:'استفسار عبر واتساب', plEnquiryCta:'هل تبحث عن هذا المنتج تحت علامتك الخاصة؟', plEnquiryBtn:'طلب علامة خاصة',
+    tabDesc:'الوصف', tabApp:'الاستخدامات', tabPack:'التعبئة', tabCert:'الشهادات',
+    specCategory:'الفئة', specPackaging:'التعبئة', specSku:'رمز المنتج', specPL:'علامة خاصة', specOEM:'متاح OEM', yes:'نعم', no:'عند الطلب',
+  }
+};
+
+let currentLang = 'en';
+
+/* ===================== I18N APPLY ===================== */
+function applyI18n(){
+  const dict = I18N[currentLang];
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    if(dict[key]) el.textContent = dict[key];
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{
+    const key = el.getAttribute('data-i18n-ph');
+    if(dict[key]) el.setAttribute('placeholder', dict[key]);
+  });
+}
+
+function setLang(lang){
+  currentLang = lang;
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  document.querySelectorAll('.lang-switch button').forEach(b=>{
+    b.classList.toggle('active', b.getAttribute('data-lang') === lang);
+  });
+  applyI18n();
+  renderDynamicContent();
+}
+
+document.querySelectorAll('.lang-switch button').forEach(b=>{
+  b.addEventListener('click', ()=> setLang(b.getAttribute('data-lang')));
+});
+
+/* ===================== DYNAMIC CONTENT RENDER ===================== */
+function t(item){ return currentLang === 'ar' ? item.ar : item.en; }
+
+function renderMfgCards(targetId){
+  const el = document.getElementById(targetId);
+  if(!el) return;
+  el.innerHTML = MFG_CAPS.slice(0,4).map(c=>`
+    <div class="card"><div class="icon">✓</div><h3>${t(c)}</h3></div>
+  `).join('');
+}
+
+function renderProcessTimeline(targetId){
+  const el = document.getElementById(targetId);
+  if(!el) return;
+  el.innerHTML = PROCESS_STEPS.map((s,i)=>`
+    <div class="step"><span class="num">${String(i+1).padStart(2,'0')}</span><h3>${t(s)}</h3></div>
+  `).join('');
+}
+
+function renderCategoryCards(){
+  const el = document.getElementById('categoryCards');
+  if(!el) return;
+  el.innerHTML = CATEGORIES.map(c=>`
+    <a href="#/products?category=${c.id}" class="cat-card">
+      <img src="${c.img}" alt="${currentLang==='ar'?c.ar:c.en}">
+      <div class="overlay"></div>
+      <div>
+        <div class="label-text">${currentLang==='ar'?c.ar:c.en}</div>
+        <div class="label-sub">${I18N[currentLang].viewProduct}</div>
+      </div>
+    </a>
+  `).join('');
+}
+
+function renderPLProcess(targetId){
+  const el = document.getElementById(targetId);
+  if(!el) return;
+  el.innerHTML = PL_PROCESS.map(s=>`
+    <li><h3 style="margin-bottom:8px;">${t(s)}</h3><p style="font-size:.88rem; color:var(--ink-soft);">${currentLang==='ar'?s.dar:s.den}</p></li>
+  `).join('');
+}
+
+function renderOemCards(){
+  const el = document.getElementById('oemCards');
+  if(!el) return;
+  el.innerHTML = OEM_POINTS.map(c=>`<div class="card"><div class="icon">✓</div><h3>${t(c)}</h3></div>`).join('');
+}
+
+function renderWhyCards(){
+  const el = document.getElementById('whyCards');
+  if(!el) return;
+  el.innerHTML = WHY_CARDS.map(c=>`<div class="card"><div class="icon">★</div><h3>${t(c)}</h3></div>`).join('');
+}
+
+function renderIndustryCards(){
+  const el = document.getElementById('industryCards');
+  if(!el) return;
+  el.innerHTML = INDUSTRIES.map(c=>`<div class="ind-card"><div class="icon">◆</div><h3>${t(c)}</h3></div>`).join('');
+}
+
+function renderQualityList(){
+  const el = document.getElementById('qualList');
+  if(!el) return;
+  el.innerHTML = QUALITY_ITEMS.map(q=>`
+    <li><span>${t(q)}</span><b>${q.note_en ? (currentLang==='ar'?q.note_ar:q.note_en) : '—'}</b></li>
+  `).join('');
+}
+
+function productName(p){ return currentLang==='ar' ? p.name_ar : p.name_en; }
+function productDesc(p){ return currentLang==='ar' ? p.desc_ar : p.desc_en; }
+function categoryName(id){ const c = CATEGORIES.find(c=>c.id===id); return c ? t(c) : id; }
+
+function productCardHTML(p){
+  return `
+  <div class="prod-card" onclick="location.hash='#/product/${p.sku}'">
+    <div class="thumb">
+      <img src="${p.img}" alt="${productName(p)}">
+      ${p.private_label ? `<span class="badge">${currentLang==='ar'?'علامة خاصة':'Private Label'}</span>` : ''}
+    </div>
+    <div class="body">
+      <div class="cat">${categoryName(p.category)}</div>
+      <h3>${productName(p)}</h3>
+      <p>${productDesc(p)}</p>
+      <div class="view">${I18N[currentLang].viewProduct} →</div>
+    </div>
+  </div>`;
+}
+
+function renderFeatured(){
+  const el = document.getElementById('featuredProducts');
+  if(!el) return;
+  el.innerHTML = PRODUCTS.slice(0,3).map(productCardHTML).join('');
+}
+
+/* Catalog state */
+let catalogState = { search:'', category:null, pl:false, oem:false, sort:'featured' };
+
+function renderCategoryFilterList(){
+  const el = document.getElementById('filterCategoryList');
+  if(!el) return;
+  el.innerHTML = CATEGORIES.map(c=>`
+    <label><input type="checkbox" class="cat-filter" value="${c.id}" ${catalogState.category===c.id?'checked':''}> <span>${t(c)}</span></label>
+  `).join('');
+  el.querySelectorAll('.cat-filter').forEach(cb=>{
+    cb.addEventListener('change', (e)=>{
+      el.querySelectorAll('.cat-filter').forEach(o=>{ if(o!==e.target) o.checked=false; });
+      catalogState.category = e.target.checked ? e.target.value : null;
+      renderCatalog();
+    });
+  });
+}
+
+function renderCatalog(){
+  let list = PRODUCTS.slice();
+  if(catalogState.category) list = list.filter(p=>p.category===catalogState.category);
+  if(catalogState.pl) list = list.filter(p=>p.private_label);
+  if(catalogState.oem) list = list.filter(p=>p.oem);
+  if(catalogState.search){
+    const q = catalogState.search.toLowerCase();
+    list = list.filter(p=> p.name_en.toLowerCase().includes(q) || p.name_ar.includes(catalogState.search));
+  }
+  if(catalogState.sort==='az') list.sort((a,b)=> productName(a).localeCompare(productName(b)));
+  if(catalogState.sort==='category') list.sort((a,b)=> a.category.localeCompare(b.category));
+
+  const grid = document.getElementById('prodGrid');
+  const count = document.getElementById('resultCount');
+  if(count) count.textContent = `${list.length} ${currentLang==='ar' ? 'منتج' : 'products'}`;
+  if(grid){
+    grid.innerHTML = list.length ? list.map(productCardHTML).join('') :
+      `<div class="empty-state" style="grid-column:1/-1;">${currentLang==='ar' ? 'لا توجد منتجات مطابقة لبحثك.' : 'No products match your filters.'}</div>`;
+  }
+}
+
+function initCatalogControls(){
+  const search = document.getElementById('prodSearch');
+  const searchBtn = document.getElementById('prodSearchBtn');
+  const plCb = document.getElementById('filterPL');
+  const oemCb = document.getElementById('filterOEM');
+  const sortSel = document.getElementById('sortSelect');
+  const clearBtn = document.getElementById('clearFilters');
+  if(search) search.addEventListener('input', e=>{ catalogState.search = e.target.value; renderCatalog(); });
+  if(searchBtn) searchBtn.addEventListener('click', ()=> renderCatalog());
+  if(plCb) plCb.addEventListener('change', e=>{ catalogState.pl = e.target.checked; renderCatalog(); });
+  if(oemCb) oemCb.addEventListener('change', e=>{ catalogState.oem = e.target.checked; renderCatalog(); });
+  if(sortSel) sortSel.addEventListener('change', e=>{ catalogState.sort = e.target.value; renderCatalog(); });
+  if(clearBtn) clearBtn.addEventListener('click', ()=>{
+    catalogState = { search:'', category:null, pl:false, oem:false, sort:'featured' };
+    if(search) search.value='';
+    if(plCb) plCb.checked=false;
+    if(oemCb) oemCb.checked=false;
+    if(sortSel) sortSel.value='featured';
+    renderCategoryFilterList();
+    renderCatalog();
+  });
+}
+
+function renderProductDetail(sku){
+  const p = PRODUCTS.find(p=>p.sku===sku);
+  const bc = document.getElementById('pdBreadcrumb');
+  const content = document.getElementById('pdContent');
+  if(!p){ if(content) content.innerHTML = `<p>${currentLang==='ar'?'المنتج غير موجود.':'Product not found.'}</p>`; return; }
+  if(bc) bc.innerHTML = `<a href="#/">${I18N[currentLang].navHome}</a> / <a href="#/products">${I18N[currentLang].navProducts}</a> / <span>${productName(p)}</span>`;
+  const d = I18N[currentLang];
+  content.innerHTML = `
+    <div class="pd-gallery">
+      <div class="main"><img src="${p.img}" alt="${productName(p)}"></div>
+      <div class="pd-thumbs"><div></div><div></div><div></div></div>
+    </div>
+    <div>
+      <div class="cat" style="color:var(--gold-deep); font-weight:700; font-size:.8rem; margin-bottom:8px;">${categoryName(p.category)}</div>
+      <h1 style="font-size:1.8rem;">${productName(p)}</h1>
+      <p class="lede" style="margin-top:12px;">${productDesc(p)}</p>
+      <ul class="pd-specs">
+        <li><span>${d.specCategory}</span><b>${categoryName(p.category)}</b></li>
+        <li><span>${d.specPackaging}</span><b>${p.packaging}</b></li>
+        <li><span>${d.specSku}</span><b>${p.sku}</b></li>
+        <li><span>${d.specPL}</span><b>${p.private_label ? d.yes : d.no}</b></li>
+        <li><span>${d.specOEM}</span><b>${p.oem ? d.yes : d.no}</b></li>
+      </ul>
+      <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px;">
+        <a href="#/contact" class="btn btn-primary">${d.quoteReq}</a>
+        <a href="https://wa.me/966000000000" target="_blank" class="btn btn-outline">${d.waEnquiry}</a>
+      </div>
+      <div class="card" style="margin-top:28px;">
+        <p style="margin-bottom:12px;">${d.plEnquiryCta}</p>
+        <a href="#/private-label" class="btn btn-gold btn-sm">${d.plEnquiryBtn}</a>
+      </div>
+    </div>
+  `;
+}
+
+function renderDynamicContent(){
+  renderMfgCards('mfgCards'); renderMfgCards('mfgCardsAbout'); renderMfgCards('mfgCardsPage');
+  renderProcessTimeline('processTimeline'); renderProcessTimeline('processTimelinePage');
+  renderCategoryCards();
+  renderPLProcess('plProcess'); renderPLProcess('plProcessPage');
+  renderOemCards();
+  renderWhyCards();
+  renderIndustryCards();
+  renderQualityList();
+  renderFeatured();
+  renderCategoryFilterList();
+  renderCatalog();
+  const activeSku = (location.hash.match(/^#\/product\/(.+)$/) || [])[1];
+  if(activeSku) renderProductDetail(activeSku);
+}
+
+/* ===================== ROUTER ===================== */
+const PAGES = {
+  '': 'page-home', '/': 'page-home',
+  '/about': 'page-about', '/manufacturing': 'page-manufacturing',
+  '/products': 'page-products', '/private-label': 'page-private-label',
+  '/oem': 'page-oem', '/contact': 'page-contact',
+};
+
+function router(){
+  const hash = location.hash.replace('#','') || '/';
+  const path = hash.split('?')[0];
+  let pageId;
+  let productMatch = path.match(/^\/product\/(.+)$/);
+  if(productMatch){
+    pageId = 'page-product-detail';
+    renderProductDetail(decodeURIComponent(productMatch[1]));
+  } else {
+    pageId = PAGES[path] || 'page-home';
+  }
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const target = document.getElementById(pageId);
+  if(target) target.classList.add('active');
+
+  document.querySelectorAll('nav.primary a').forEach(a=>{
+    a.classList.toggle('active', a.getAttribute('href') === '#'+path);
+  });
+
+  // handle category query param
+  const catMatch = hash.match(/category=([\w-]+)/);
+  if(pageId === 'page-products'){
+    catalogState.category = catMatch ? catMatch[1] : catalogState.category;
+    renderCategoryFilterList();
+    renderCatalog();
+  }
+  window.scrollTo({top:0, behavior:'instant' in window ? 'instant' : 'auto'});
+  revealOnScroll();
+}
+window.addEventListener('hashchange', router);
+
+/* ===================== HEADER / DRAWER / SCROLL ===================== */
+window.addEventListener('scroll', ()=>{
+  document.getElementById('siteHeader').classList.toggle('scrolled', window.scrollY > 8);
+});
+const drawer = document.getElementById('drawer');
+const drawerBackdrop = document.getElementById('drawerBackdrop');
+document.getElementById('hamburgerBtn').addEventListener('click', ()=>{
+  drawer.classList.add('open'); drawerBackdrop.classList.add('open');
+});
+document.getElementById('drawerClose').addEventListener('click', closeDrawer);
+drawerBackdrop.addEventListener('click', closeDrawer);
+function closeDrawer(){ drawer.classList.remove('open'); drawerBackdrop.classList.remove('open'); }
+document.querySelectorAll('.drawer-link').forEach(a=>a.addEventListener('click', closeDrawer));
+document.querySelectorAll('#drawerLangSwitch button').forEach(b=>{
+  b.addEventListener('click', ()=> setLang(b.getAttribute('data-lang')));
+});
+
+function revealOnScroll(){
+  const items = document.querySelectorAll('[data-reveal]:not(.in)');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, {threshold:.12});
+  items.forEach(i=>io.observe(i));
+}
+
+/* Forms — placeholder submit handling (wire to backend/CRM later) */
+['plForm','contactForm'].forEach(id=>{
+  const f = document.getElementById(id);
+  if(f) f.addEventListener('submit', e=>{
+    e.preventDefault();
+    alert(I18N[currentLang].thankYou);
+    f.reset();
+  });
+});
+
+/* ===================== INIT ===================== */
+applyI18n();
+renderDynamicContent();
+router();
+</script>
+</body>
+</html>
